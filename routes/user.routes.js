@@ -7,10 +7,6 @@ const {
   updateUser,
 } = require("../controllers/user.controller");
 
-const {
-  registerSchema,
-  loginSchema,
-} = require("../validation/user.validation")
 
 const router = require("express").Router();
 
