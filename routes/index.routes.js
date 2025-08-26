@@ -1,13 +1,22 @@
 const router = require("express").Router();
+const adminRouter = require("./admin.routes");
+const districtRouter = require('./district.routes');
+const toolRouter = require('./tool.routes');
+const userRouter = require('./user.routes');
+const shopRouter = require('./shop.routes');
+const shopToolRouter = require('./shop_tool.routes');
+const OrderRouter = require('./order.routes');
 
-const fuelTypeRouter = require("./fuel_types.routes");
-const gasStationRouter = require("./gas_station.routes");
-const gasStationBranchRouter = require("./gas_station_branch.routes");
-const gasStationFuelTypeRouter = require("./gas_station_fuel_type.routes");
 
-router.use("/fuel_types", fuelTypeRouter);
-router.use("/gas_stations", gasStationRouter);
-router.use("/branches", gasStationBranchRouter);
-router.use("/station_fuel_types", gasStationFuelTypeRouter);
+
+router.use('/admin', adminRouter);
+router.use('/district', districtRouter);
+router.use('/tool', toolRouter);
+router.use('/user', userRouter);
+router.use('/shop', shopRouter);
+router.use('/shop_tool', shopToolRouter);
+router.use('/order', OrderRouter);
+
+
 
 module.exports = router;
